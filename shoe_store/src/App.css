@@ -13,18 +13,18 @@
   text-decoration: underline;
 }
 
-.home .img-container{
-  background-image: url('./shoe/bg.jpg');
+.home .img-container {
+  background-image: url("./shoe/bg.jpg");
   width: 100%;
   background-position: center;
-  height:  500px;
+  height: 500px;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
   /* padding: 20vh 0; */
-  background: url('./shoe/bg.jpg') no-repeat cover center;;
+  background: url("./shoe/bg.jpg") no-repeat cover center;
 }
-.img-container >*{
+.img-container > * {
   margin-top: 30vh;
   background-color: blueviolet;
   /* color: white; */
@@ -32,36 +32,35 @@
   padding: 5px;
   text-align: center;
   cursor: pointer;
-  transition: all .1s;
+  transition: all 0.1s;
   outline: none;
   border: 1px solid blueviolet;
   text-align: center;
 }
 
-.img-container >*:active{
+.img-container > *:active {
   transform: scale(1.05);
-
-
 }
-.img-container >* *{
+.img-container > * * {
   text-decoration: none;
   color: white !important;
 }
 
-.App .card{
+.App .card {
   margin: 10px;
 }
-.App .card-container{
+.App .card-container {
   display: flex;
   flex-wrap: wrap;
 }
-.App .card-container>*{
+.App .card-container > * {
   flex: 1;
   min-width: 350px;
 }
-.App .card .item-name,.App .card .item-buy{
+.App .card .item-name,
+.App .card .item-buy {
   background-color: grey;
-  opacity: .3;
+  opacity: 0.3;
   margin: 10px 0;
   padding: 10px;
   text-align: center;
@@ -70,38 +69,75 @@
   top: calc(500px - 60px - 41px);
   /* margin-bottom: 0; */
   bottom: 0;
-  transition: background-color .2s;
+  transition: background-color 0.2s;
 }
 
-.App .card .item-name:hover,.App .card .item-buy:hover{
+.App .card .item-name:hover,
+.App .card .item-buy:hover {
   opacity: 1;
   background-color: black;
   color: white !important;
-
 }
-.card-img-container{
+.card-img-container {
   overflow: hidden;
 }
-.card-img-container img{
+.card-img-container img {
   cursor: pointer;
-  transition: all .3s;
+  transition: all 0.3s;
 }
-.card-img-container img:hover{
+.card-img-container img:hover {
   transform: scale(1.1);
 }
 
-.flex-box{
+.flex-box {
   display: flex;
   margin: 10px 0;
   justify-content: space-between;
 }
-.flex-box >*{
-/* flex: 1; */
-margin: 10px 0;
-/* text-align: left; */
+.flex-box > * {
+  /* flex: 1; */
+  margin: 10px 0;
+  /* text-align: left; */
 }
-.product{
+.product {
   margin: 100px auto;
   width: 300px;
   /* margin: auto; */
+}
+.contact-us {
+  width: 600px;
+  height: 400px;
+  margin: 80px auto;
+  /* border: 1px solid black; */
+  padding: 20px;
+  box-shadow: 1px 1px 1px 1px grey;
+}
+.flex-item {
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.input {
+  height: 20px;
+  width: 300px;
+  border: 1px solid black;
+  border-width: 0 0 1px 0;
+  outline: none;
+  /* border-bottom: 1px; */
+}
+.textarea {
+  /* height: 20px; */
+  width: 300px;
+  outline: none;
+  border: 1px solid black;
+  /* border-width: 0 0 1px 0; */
+}
+.btn{
+  margin-top: 20px;
+  background-color: rgb(3, 112, 112);
+  outline: none;
+  cursor: pointer;
+  padding: 5px;
+  border: 1px solid rgb(3, 112, 112);
+  color: white;
 }

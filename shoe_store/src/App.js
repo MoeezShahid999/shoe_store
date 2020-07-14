@@ -43,7 +43,7 @@ function App() {
             <Route path="/" element={<MyStore />} />
             <Route path=":model" element={<MyProduct />} />
           </Route>
-          <Route path = '/contact_us' element = {<ContactUs/>}/>
+          <Route path="/contact_us" element={<ContactUs />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>
@@ -145,11 +145,63 @@ const MyProduct = () => {
 };
 
 
-const ContactUs = ()=>{
-  return(
-    <div>Hi there</div>
-  )
-}
+const ContactUs = (e) => {
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [message, setMessage] = React.useState("");
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+  };
+  const handleName = (e) => {
+    setName(e.target.value);
+  };
+  const handleMessage = (e) => {
+    setMessage(e.target.value);
+  };
+  const sendMessage = ()=>{
+    alert("This is just a dummy contact-us form")
+  }
+  return (
+    <div className="contact-us">
+      <h2>Contact Us</h2>
+      <div className="flex-box">
+        <div className="flex-item">Name</div>
+        <div>
+          <input
+            onChange={handleName}
+            placeholder="Enter your full name"
+            className="input"
+            value={name}
+          />
+        </div>
+      </div>
+      <div className="flex-box">
+        <div className="flex-item">Email</div>
+        <div>
+          <input
+            onChange={handleEmail}
+            placeholder="Enter your Email"
+            className="input"
+            value={email}
+          />
+        </div>
+      </div>
+      <div className="flex-box">
+        <div className="flex-item">Message</div>
+        <div>
+          <textarea
+            onChange={handleMessage}
+            placeholder="Enter your message"
+            className="textarea"
+            rows="4"
+            value={message}
+          ></textarea>
+        </div>
+      </div>
+      <button className="btn" onClick = {sendMessage}>Send Message</button>
+    </div>
+  );
+};
 
 const NotFound = () => {
   return (
