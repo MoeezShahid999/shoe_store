@@ -1,38 +1,107 @@
-.App {
+.App .header {
+  background-color: black;
+  opacity: 0.9;
+  height: 40px;
+  padding: 15px 0 0 10px;
+}
+.App .header * {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.App .header *:hover {
+  text-decoration: underline;
+}
+
+.home .img-container{
+  background-image: url('./shoe/bg.jpg');
+  width: 100%;
+  background-position: center;
+  height:  500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  /* padding: 20vh 0; */
+  background: url('./shoe/bg.jpg') no-repeat cover center;;
+}
+.img-container >*{
+  margin-top: 30vh;
+  background-color: blueviolet;
+  /* color: white; */
+  width: 150px;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: all .1s;
+  outline: none;
+  border: 1px solid blueviolet;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.img-container >*:active{
+  transform: scale(1.05);
+
+
+}
+.img-container >* *{
+  text-decoration: none;
+  color: white !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .card{
+  margin: 10px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App .card-container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+}
+.App .card-container>*{
+  flex: 1;
+  min-width: 350px;
+}
+.App .card .item-name,.App .card .item-buy{
+  background-color: grey;
+  opacity: .3;
+  margin: 10px 0;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  top: calc(500px - 60px - 41px);
+  /* margin-bottom: 0; */
+  bottom: 0;
+  transition: background-color .2s;
 }
 
-.App-link {
-  color: #61dafb;
+.App .card .item-name:hover,.App .card .item-buy:hover{
+  opacity: 1;
+  background-color: black;
+  color: white !important;
+
+}
+.card-img-container{
+  overflow: hidden;
+}
+.card-img-container img{
+  cursor: pointer;
+  transition: all .3s;
+}
+.card-img-container img:hover{
+  transform: scale(1.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flex-box{
+  display: flex;
+  margin: 10px 0;
+  justify-content: space-between;
+}
+.flex-box >*{
+/* flex: 1; */
+margin: 10px 0;
+/* text-align: left; */
+}
+.product{
+  margin: 100px auto;
+  width: 300px;
+  /* margin: auto; */
 }
